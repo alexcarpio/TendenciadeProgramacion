@@ -51,7 +51,7 @@ class Triangulo {
                 <form action="" method="POST" name="transporte"aling="center"> 
                     <table aling = "center" border = "1">
                         <tr>
-                           <td style="background-color:navajowhite; text-align: center; width: 100% ">PERIMETRO DE UN CUADRADO</td>
+                           <td style="background-color:navajowhite; text-align: center; width: 100% ">PERIMETRO DE UN TRIANGULO</td>
                         </tr>
                         <tr>
                             <td>LADO1</td>
