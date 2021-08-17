@@ -1,6 +1,5 @@
 <?php
-include('is_logged.php');//Archivo verifica que el usario que intenta acceder a la URL esta logueado
-	/*Inicia validacion del lado del servidor*/
+include('is_logged.php');
 	if (empty($_POST['codigo'])) {
            $errors[] = "Código vacío";
         } else if (empty($_POST['nombre'])){
@@ -15,10 +14,9 @@ include('is_logged.php');//Archivo verifica que el usario que intenta acceder a 
 			$_POST['estado']!="" &&
 			!empty($_POST['precio'])
 		){
-		/* Connect To Database*/
-		require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-		require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
-		// escaping, additionally removing everything that could be (html/javascript-) code
+		
+		require_once ("../config/db.php");
+		require_once ("../config/conexion.php");
 		$codigo=mysqli_real_escape_string($con,(strip_tags($_POST["codigo"],ENT_QUOTES)));
 		$nombre=mysqli_real_escape_string($con,(strip_tags($_POST["nombre"],ENT_QUOTES)));
 		$estado=intval($_POST['estado']);

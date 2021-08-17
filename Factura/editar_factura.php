@@ -1,9 +1,5 @@
 <?php
-	/*-------------------------
-	Autor: Obed Alvarado
-	Web: obedalvarado.pw
-	Mail: info@obedalvarado.pw
-	---------------------------*/
+	
 	session_start();
 	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
         header("location: login.php");
@@ -13,11 +9,11 @@
 	$active_productos="";
 	$active_clientes="";
 	$active_usuarios="";	
-	$title="Editar Factura | Simple Invoice";
+	$title="Editar Factura";
 	
-	/* Connect To Database*/
-	require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-	require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
+	
+	require_once ("config/db.php");
+	require_once ("config/conexion.php");
 	
 	if (isset($_GET['id_factura']))
 	{
@@ -52,7 +48,7 @@
 		exit;
 	}
 ?>
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <?php include("head.php");?>

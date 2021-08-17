@@ -24,7 +24,7 @@
 		{
 			var precio_venta=document.getElementById('precio_venta_'+id).value;
 			var cantidad=document.getElementById('cantidad_'+id).value;
-			//Inicia validacion
+			
 			if (isNaN(cantidad))
 			{
 			alert('Esto no es un numero');
@@ -37,7 +37,7 @@
 			document.getElementById('precio_venta_'+id).focus();
 			return false;
 			}
-			//Fin validacion
+		
 			
 			$.ajax({
         type: "POST",
@@ -133,6 +133,4 @@
 		  event.preventDefault();
 		})
 
-		function imprimir_factura(id_factura){
-			VentanaCentrada('./pdf/documentos/ver_factura.php?id_factura='+id_factura,'Factura','','1024','768','true');
-		}
+		

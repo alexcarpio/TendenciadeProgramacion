@@ -23,7 +23,7 @@
 		{
 			var precio_venta=document.getElementById('precio_venta_'+id).value;
 			var cantidad=document.getElementById('cantidad_'+id).value;
-			//Inicia validacion
+			
 			if (isNaN(cantidad))
 			{
 			alert('Esto no es un numero');

@@ -1,9 +1,5 @@
 <?php
-	/*-------------------------
-	Autor: Obed Alvarado
-	Web: obedalvarado.pw
-	Mail: info@obedalvarado.pw
-	---------------------------*/
+	
 	session_start();
 	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
         header("location: login.php");
@@ -13,13 +9,13 @@
 	$active_productos="";
 	$active_clientes="";
 	$active_usuarios="";	
-	$title="Nueva Factura | Simple Invoice";
+	$title="Nueva Factura";
 	
-	/* Connect To Database*/
-	require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-	require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
+	
+	require_once ("config/db.php");
+	require_once ("config/conexion.php");
 ?>
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <?php include("head.php");?>
@@ -103,15 +99,12 @@
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
 						 <span class="glyphicon glyphicon-search"></span> Agregar productos
 						</button>
-						<button type="submit" class="btn btn-default">
-						  <span class="glyphicon glyphicon-print"></span> Imprimir
-						</button>
+					
 					</div>	
 				</div>
 			</form>	
 			
-		<div id="resultados" class='col-md-12' style="margin-top:10px"></div><!-- Carga los datos ajax -->			
-		</div>
+		<div id="resultados" class='col-md-12' style="margin-top:10px"></div>
 	</div>		
 		  <div class="row-fluid">
 			<div class="col-md-12">
